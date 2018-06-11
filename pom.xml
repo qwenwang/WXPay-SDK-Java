@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.wxpay</groupId>
+    <groupId>com.nhsoft.wxpay</groupId>
     <artifactId>WXPay-SDK-Java</artifactId>
     <version>0.0.4</version>
     <name>WXPay-SDK-Java</name>
