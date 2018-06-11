@@ -305,10 +305,10 @@ public class WXPay {
     public Map<String, String> microPay(Map<String, String> reqData, int connectTimeoutMs, int readTimeoutMs) throws Exception {
         String url;
         if (this.useSandbox) {
-            url = WXPayConstants.SANDBOX_MICROPAY_URL;
+            url = this.config.getWeixinSandboxURL()+WXPayConstants.MICROPAY_URL;
         }
         else {
-            url = WXPayConstants.MICROPAY_URL;
+            url = this.config.getWeixinURL()+WXPayConstants.MICROPAY_URL;
         }
         String respXml = this.requestWithoutCert(url, this.fillRequestData(reqData), connectTimeoutMs, readTimeoutMs);
         return this.processResponseXml(respXml);
@@ -339,10 +339,10 @@ public class WXPay {
     public Map<String, String> unifiedOrder(Map<String, String> reqData,  int connectTimeoutMs, int readTimeoutMs) throws Exception {
         String url;
         if (this.useSandbox) {
-            url = WXPayConstants.SANDBOX_UNIFIEDORDER_URL;
+            url = this.config.getWeixinSandboxURL()+WXPayConstants.UNIFIEDORDER_URL;
         }
         else {
-            url = WXPayConstants.UNIFIEDORDER_URL;
+            url = this.config.getWeixinURL()+WXPayConstants.UNIFIEDORDER_URL;
         }
         String respXml = this.requestWithoutCert(url, this.fillRequestData(reqData), connectTimeoutMs, readTimeoutMs);
         return this.processResponseXml(respXml);
@@ -373,10 +373,10 @@ public class WXPay {
     public Map<String, String> orderQuery(Map<String, String> reqData, int connectTimeoutMs, int readTimeoutMs) throws Exception {
         String url;
         if (this.useSandbox) {
-            url = WXPayConstants.SANDBOX_ORDERQUERY_URL;
+            url = this.config.getWeixinSandboxURL()+WXPayConstants.ORDERQUERY_URL;
         }
         else {
-            url = WXPayConstants.ORDERQUERY_URL;
+            url = this.config.getWeixinURL()+WXPayConstants.ORDERQUERY_URL;
         }
         String respXml = this.requestWithoutCert(url, this.fillRequestData(reqData), connectTimeoutMs, readTimeoutMs);
         return this.processResponseXml(respXml);
@@ -408,10 +408,10 @@ public class WXPay {
     public Map<String, String> reverse(Map<String, String> reqData, int connectTimeoutMs, int readTimeoutMs) throws Exception {
         String url;
         if (this.useSandbox) {
-            url = WXPayConstants.SANDBOX_REVERSE_URL;
+            url = this.config.getWeixinSandboxURL()+WXPayConstants.REVERSE_URL;
         }
         else {
-            url = WXPayConstants.REVERSE_URL;
+            url = this.config.getWeixinURL()+WXPayConstants.REVERSE_URL;
         }
         String respXml = this.requestWithCert(url, this.fillRequestData(reqData), connectTimeoutMs, readTimeoutMs);
         return this.processResponseXml(respXml);
@@ -442,10 +442,10 @@ public class WXPay {
     public Map<String, String> closeOrder(Map<String, String> reqData,  int connectTimeoutMs, int readTimeoutMs) throws Exception {
         String url;
         if (this.useSandbox) {
-            url = WXPayConstants.SANDBOX_CLOSEORDER_URL;
+            url = this.config.getWeixinSandboxURL()+WXPayConstants.CLOSEORDER_URL;
         }
         else {
-            url = WXPayConstants.CLOSEORDER_URL;
+            url = this.config.getWeixinURL()+WXPayConstants.CLOSEORDER_URL;
         }
         String respXml = this.requestWithoutCert(url, this.fillRequestData(reqData), connectTimeoutMs, readTimeoutMs);
         return this.processResponseXml(respXml);
@@ -477,10 +477,10 @@ public class WXPay {
     public Map<String, String> refund(Map<String, String> reqData, int connectTimeoutMs, int readTimeoutMs) throws Exception {
         String url;
         if (this.useSandbox) {
-            url = WXPayConstants.SANDBOX_REFUND_URL;
+            url = this.config.getWeixinSandboxURL()+WXPayConstants.REFUND_URL;
         }
         else {
-            url = WXPayConstants.REFUND_URL;
+            url = this.config.getWeixinURL()+WXPayConstants.REFUND_URL;
         }
         String respXml = this.requestWithCert(url, this.fillRequestData(reqData), connectTimeoutMs, readTimeoutMs);
         return this.processResponseXml(respXml);
@@ -511,10 +511,10 @@ public class WXPay {
     public Map<String, String> refundQuery(Map<String, String> reqData, int connectTimeoutMs, int readTimeoutMs) throws Exception {
         String url;
         if (this.useSandbox) {
-            url = WXPayConstants.SANDBOX_REFUNDQUERY_URL;
+            url = this.config.getWeixinSandboxURL()+WXPayConstants.REFUNDQUERY_URL;
         }
         else {
-            url = WXPayConstants.REFUNDQUERY_URL;
+            url = this.config.getWeixinURL()+WXPayConstants.REFUNDQUERY_URL;
         }
         String respXml = this.requestWithoutCert(url, this.fillRequestData(reqData), connectTimeoutMs, readTimeoutMs);
         return this.processResponseXml(respXml);
@@ -547,10 +547,10 @@ public class WXPay {
     public Map<String, String> downloadBill(Map<String, String> reqData, int connectTimeoutMs, int readTimeoutMs) throws Exception {
         String url;
         if (this.useSandbox) {
-            url = WXPayConstants.SANDBOX_DOWNLOADBILL_URL;
+            url = this.config.getWeixinSandboxURL()+WXPayConstants.DOWNLOADBILL_URL;
         }
         else {
-            url = WXPayConstants.DOWNLOADBILL_URL;
+            url = this.config.getWeixinURL()+WXPayConstants.DOWNLOADBILL_URL;
         }
         String respStr = this.requestWithoutCert(url, this.fillRequestData(reqData), connectTimeoutMs, readTimeoutMs).trim();
         Map<String, String> ret;
@@ -593,10 +593,10 @@ public class WXPay {
     public Map<String, String> report(Map<String, String> reqData, int connectTimeoutMs, int readTimeoutMs) throws Exception {
         String url;
         if (this.useSandbox) {
-            url = WXPayConstants.SANDBOX_REPORT_URL;
+            url = this.config.getWeixinSandboxURL()+WXPayConstants.REPORT_URL;
         }
         else {
-            url = WXPayConstants.REPORT_URL;
+            url = this.config.getWeixinURL()+WXPayConstants.REPORT_URL;
         }
         String respXml = this.requestWithoutCert(url, this.fillRequestData(reqData), connectTimeoutMs, readTimeoutMs);
         return WXPayUtil.xmlToMap(respXml);
@@ -625,10 +625,10 @@ public class WXPay {
     public Map<String, String> shortUrl(Map<String, String> reqData, int connectTimeoutMs, int readTimeoutMs) throws Exception {
         String url;
         if (this.useSandbox) {
-            url = WXPayConstants.SANDBOX_SHORTURL_URL;
+            url = this.config.getWeixinSandboxURL()+WXPayConstants.SHORTURL_URL;
         }
         else {
-            url = WXPayConstants.SHORTURL_URL;
+            url = this.config.getWeixinURL()+WXPayConstants.SHORTURL_URL;
         }
         String respXml = this.requestWithoutCert(url, this.fillRequestData(reqData), connectTimeoutMs, readTimeoutMs);
         return this.processResponseXml(respXml);
@@ -659,10 +659,10 @@ public class WXPay {
     public Map<String, String> authCodeToOpenid(Map<String, String> reqData, int connectTimeoutMs, int readTimeoutMs) throws Exception {
         String url;
         if (this.useSandbox) {
-            url = WXPayConstants.SANDBOX_AUTHCODETOOPENID_URL;
+            url = this.config.getWeixinSandboxURL()+WXPayConstants.AUTHCODETOOPENID_URL;
         }
         else {
-            url = WXPayConstants.AUTHCODETOOPENID_URL;
+            url = this.config.getWeixinURL()+WXPayConstants.AUTHCODETOOPENID_URL;
         }
         String respXml = this.requestWithoutCert(url, this.fillRequestData(reqData), connectTimeoutMs, readTimeoutMs);
         return this.processResponseXml(respXml);

@@ -17,29 +17,15 @@ public class WXPayConstants {
     public static final String FIELD_SIGN = "sign";
     public static final String FIELD_SIGN_TYPE = "sign_type";
 
-    public static final String MICROPAY_URL     = "https://api.mch.weixin.qq.com/pay/micropay";
-    public static final String UNIFIEDORDER_URL = "https://api.mch.weixin.qq.com/pay/unifiedorder";
-    public static final String ORDERQUERY_URL   = "https://api.mch.weixin.qq.com/pay/orderquery";
-    public static final String REVERSE_URL      = "https://api.mch.weixin.qq.com/secapi/pay/reverse";
-    public static final String CLOSEORDER_URL   = "https://api.mch.weixin.qq.com/pay/closeorder";
-    public static final String REFUND_URL       = "https://api.mch.weixin.qq.com/secapi/pay/refund";
-    public static final String REFUNDQUERY_URL  = "https://api.mch.weixin.qq.com/pay/refundquery";
-    public static final String DOWNLOADBILL_URL = "https://api.mch.weixin.qq.com/pay/downloadbill";
-    public static final String REPORT_URL       = "https://api.mch.weixin.qq.com/payitil/report";
-    public static final String SHORTURL_URL     = "https://api.mch.weixin.qq.com/tools/shorturl";
-    public static final String AUTHCODETOOPENID_URL = "https://api.mch.weixin.qq.com/tools/authcodetoopenid";
-
-    // sandbox
-    public static final String SANDBOX_MICROPAY_URL     = "https://api.mch.weixin.qq.com/sandboxnew/pay/micropay";
-    public static final String SANDBOX_UNIFIEDORDER_URL = "https://api.mch.weixin.qq.com/sandboxnew/pay/unifiedorder";
-    public static final String SANDBOX_ORDERQUERY_URL   = "https://api.mch.weixin.qq.com/sandboxnew/pay/orderquery";
-    public static final String SANDBOX_REVERSE_URL      = "https://api.mch.weixin.qq.com/sandboxnew/secapi/pay/reverse";
-    public static final String SANDBOX_CLOSEORDER_URL   = "https://api.mch.weixin.qq.com/sandboxnew/pay/closeorder";
-    public static final String SANDBOX_REFUND_URL       = "https://api.mch.weixin.qq.com/sandboxnew/secapi/pay/refund";
-    public static final String SANDBOX_REFUNDQUERY_URL  = "https://api.mch.weixin.qq.com/sandboxnew/pay/refundquery";
-    public static final String SANDBOX_DOWNLOADBILL_URL = "https://api.mch.weixin.qq.com/sandboxnew/pay/downloadbill";
-    public static final String SANDBOX_REPORT_URL       = "https://api.mch.weixin.qq.com/sandboxnew/payitil/report";
-    public static final String SANDBOX_SHORTURL_URL     = "https://api.mch.weixin.qq.com/sandboxnew/tools/shorturl";
-    public static final String SANDBOX_AUTHCODETOOPENID_URL = "https://api.mch.weixin.qq.com/sandboxnew/tools/authcodetoopenid";
-
+    public static final String MICROPAY_URL     = "/pay/micropay";
+    public static final String UNIFIEDORDER_URL = "/pay/unifiedorder";
+    public static final String ORDERQUERY_URL   = "/pay/orderquery";
+    public static final String REVERSE_URL      = "/secapi/pay/reverse";
+    public static final String CLOSEORDER_URL   = "/pay/closeorder";
+    public static final String REFUND_URL       = "/secapi/pay/refund";
+    public static final String REFUNDQUERY_URL  = "/pay/refundquery";
+    public static final String DOWNLOADBILL_URL = "/pay/downloadbill";
+    public static final String REPORT_URL       = "/payitil/report";
+    public static final String SHORTURL_URL     = "/tools/shorturl";
+    public static final String AUTHCODETOOPENID_URL = "/tools/authcodetoopenid";
 }

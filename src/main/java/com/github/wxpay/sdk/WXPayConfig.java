@@ -50,4 +50,12 @@ public interface WXPayConfig {
      */
     public int getHttpReadTimeoutMs();
 
+    public default String getWeixinURL() {
+        return "https://api.mch.weixin.qq.com";
+    }
+
+    public default String getWeixinSandboxURL() {
+        return "https://api.mch.weixin.qq.com/sandboxnew";
+    }
+
 }
